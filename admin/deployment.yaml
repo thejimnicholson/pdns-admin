@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: powerdns-admin
+  namespace: pdns
+  labels:
+    app: powerdns-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: powerdns-admin
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: powerdns-admin
+    spec:
+      containers:
+      - image: ngoduykhanh/powerdns-admin:latest
+        name: powedns-admin
+        ports:
+        - name: http-port
+          containerPort: 80
+        env:
+          - name: SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: pdns-admin-secrets
+                key: secret_key
+        volumeMounts:
+          - name: pdns-admin-vol
+            mountPath: /data
+      securityContext:
+        fsGroup: 1000
+      volumes:
+      - name: pdns-admin-vol
+        persistentVolumeClaim:
+          claimName: pdns-admin-claim
