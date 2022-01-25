@@ -5,15 +5,19 @@ cnsl02.home.thejimnicholson.com	3600	IN	A	10.0.96.81
 cnsl03.home.thejimnicholson.com	3600	IN	A	10.0.96.82
 disk.home.thejimnicholson.com	3600	IN	A	10.0.96.2
 dns01.home.thejimnicholson.com	3600	IN	A	10.0.96.30
+docker.home.thejimnicholson.com	60	IN	CNAME	cluster-gw.home.thejimnicholson.com.
 dswarm01.home.thejimnicholson.com	3600	IN	A	10.0.96.70
 dswarm02.home.thejimnicholson.com	3600	IN	A	10.0.96.71
 dswarm03.home.thejimnicholson.com	3600	IN	A	10.0.96.72
 fileserver.home.thejimnicholson.com	3600	IN	A	10.0.96.3
 grafana.home.thejimnicholson.com	3600	IN	CNAME	lb.home.thejimnicholson.com.
-home.thejimnicholson.com	3600	IN	NS	ns1.home.thejimnicholson.com.
-home.thejimnicholson.com	3600	IN	SOA	something.else hostmaster.home.thejimnicholson.com 15 10800 3600 604800 3600
+guac.home.thejimnicholson.com	60	IN	CNAME	lb.home.thejimnicholson.com.
+heimdall.home.thejimnicholson.com	60	IN	CNAME	lb.home.thejimnicholson.com.
+home.thejimnicholson.com	60	IN	NS	ns1.home.thejimnicholson.com.
+home.thejimnicholson.com	3600	IN	SOA	something.else hostmaster.home.thejimnicholson.com 19 10800 3600 604800 3600
 lb.home.thejimnicholson.com	3600	IN	A	10.0.96.5
 oort.home.thejimnicholson.com	3600	IN	A	10.0.96.179
+pdns.home.thejimnicholson.com	60	IN	CNAME	lb.home.thejimnicholson.com.
 pikube.home.thejimnicholson.com	3600	IN	A	10.0.96.41
 pikube.home.thejimnicholson.com	3600	IN	A	10.0.96.45
 pikube.home.thejimnicholson.com	3600	IN	A	10.0.96.50
@@ -27,7 +31,6 @@ pikube07.home.thejimnicholson.com	3600	IN	A	10.0.96.47
 pikube08.home.thejimnicholson.com	3600	IN	A	10.0.96.48
 pikube09.home.thejimnicholson.com	3600	IN	A	10.0.96.49
 pikube10.home.thejimnicholson.com	3600	IN	A	10.0.96.50
-portainer.home.thejimnicholson.com	3600	IN	A	10.0.96.165
 pve.home.thejimnicholson.com	3600	IN	A	10.0.96.10
 pve2.home.thejimnicholson.com	3600	IN	A	10.0.96.11
 pve3.home.thejimnicholson.com	3600	IN	A	10.0.96.13
