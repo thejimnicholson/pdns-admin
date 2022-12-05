@@ -32,8 +32,8 @@ spec:
         volumeMounts:
           - name: pdns-admin-vol
             mountPath: /data
-      securityContext:
-        fsGroup: 1000
+      # securityContext:
+      #   fsGroup: 101
       volumes:
       - name: pdns-admin-vol
         persistentVolumeClaim:
